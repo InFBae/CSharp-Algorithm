@@ -60,7 +60,27 @@
 
         static void Main(string[] args)
         {
-            
+            DataStructure.List<string> list = new DataStructure.List<string>();
+
+            list.Add("1번 데이터");
+            list.Add("2번 데이터");
+            list.Add("3번 데이터");
+            list.Add("4번 데이터");
+            list.Add("5번 데이터");
+
+            list.Remove("2번 데이터");
+            list.RemoveAt(0);
+
+            list[0] = "첫번째 데이터";
+            string str = list[0];
+
+            for(int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+
+            string? findValue = list.Find(x=>x.Contains('4'));
+            int findIndex = list.FindIndex(x => x.Contains('1'));
         }
     }
 }
