@@ -178,6 +178,23 @@ namespace DataStructure
         }
    
 
+        public void Print()
+        {
+            Print(root);
+        }
+        public void Print(Node node)
+        {
+            if(node.left != null)
+            {
+                Print(node.left);
+            }
+            Console.WriteLine(node.item);
+            if (node.right != null)
+            {
+                Print(node.right);
+            }
+                     
+        }
         public class Node
         {
             internal T item;

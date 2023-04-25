@@ -99,6 +99,7 @@ namespace _07.BinarySearchTree
             bst.Add(2);
             bst.Add(4);
             bst.Add(6);
+            bst.Print();
 
             int result;
             if(bst.TryGetValue(3, out result)){
@@ -106,7 +107,8 @@ namespace _07.BinarySearchTree
             }
 
             bst.Remove(3);
-            bst.Remove(4);                       
+            bst.Remove(4);
+            bst.Print();
         }
     }
 }
